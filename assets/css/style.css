@@ -1,0 +1,139 @@
+.container {
+  position:relative;
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+  }
+
+  .child {
+    position:relative;
+    color:white;
+    display: none;
+    border: 1px solid white;
+    padding: 10px;
+    margin:10px;
+  }
+
+  .grandchild {
+    position:relative;
+    display: none;
+    border: 1px solid green;
+    padding: 10px;
+    margin:10px;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  html {
+    background-color: #f9f9f9;
+    font-family: "Share Tech", sans-serif;
+  }
+  
+  .carbon-bg {
+    background: radial-gradient(#000000 15%, rgba(0, 0, 0, 0) 16%) 0 0, radial-gradient(#000000 15%, rgba(0, 0, 0, 0) 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 0 1px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 8px 9px;
+    background-color: #282828;
+    background-size: 16px 16px;
+  }
+  
+  .slider {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+    transition: all 0.3s cubic-bezier(0, 0, 0.68, 1.05) 0s;
+    color: white;
+  }
+  .slide .title {
+    font-size: 60px;
+    margin-top: 2%;
+    text-shadow: 1px 1px 0px #d8d8d8, 2px 2px 0px #d8d8d8, 3px 3px 0px #d8d8d8;
+  }
+  .slide p {
+    font-size: 30px;
+    margin-top: 3%;
+  }
+  .slide .img {
+    width: 350px;
+    height: auto;
+    border: 2px solid white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 3%;
+  }
+  .slide .disclaimer {
+    display: block;
+    font-size: 20px;
+    padding: 3% 10%;
+  }
+  .slide a {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .centered-text {
+    text-align: center;
+  }
+  
+  .navigation {
+    display: none;
+  }
+  
+  label {
+    z-index: 10;
+    position: absolute;
+    bottom: 20px;
+    left: -20px;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    border-radius: 22px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+  }
+  
+  label:nth-of-type(1) {
+    margin-left: 30px;
+  }
+  
+  label:nth-of-type(2) {
+    margin-left: 60px;
+  }
+  
+  label:nth-of-type(3) {
+    margin-left: 90px;
+  }
+  
+  label:hover {
+    box-shadow: 0px 0px 0px 3px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .navigation:checked + label {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+  }
+  .navigation:checked + label:hover {
+    box-shadow: none;
+    cursor: default;
+  }
+  
+  .navigation:checked + label + .slide {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    transition: all 0.5s cubic-bezier(0, 0, 0.68, 1.05) 0s;
+  }
+  

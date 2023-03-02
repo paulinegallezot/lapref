@@ -23,3 +23,5 @@ function toggleGrandchildren(child) {
     }
   }
 }
+
+document.querySelectorAll('.child').draggable()
